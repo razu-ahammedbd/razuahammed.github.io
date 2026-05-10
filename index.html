@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Razu Ahammed — SEO & Digital Marketing Specialist</title>
+<meta name="description" content="Razu Ahammed is a Full Stack Digital Marketing Specialist with 9+ years experience in SEO, GA4, GTM, Data Analytics and E-commerce. Based in Dhaka, Bangladesh.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#0a0f1e;
+  --navy2:#0d1528;
+  --navy3:#111c36;
+  --navy4:#1a2a4a;
+  --blue:#2563eb;
+  --blue2:#3b82f6;
+  --accent:#60a5fa;
+  --gold:#f59e0b;
+  --text:#e2e8f0;
+  --text2:#94a3b8;
+  --text3:#64748b;
+  --border:#1e3054;
+  --card:#0f1d35;
+  --radius:12px;
+  --fh:'Fraunces',Georgia,serif;
+  --fb:'Inter',system-ui,sans-serif;
+}
+html{scroll-behavior:smooth;}
+body{font-family:var(--fb);background:var(--navy);color:var(--text);line-height:1.7;font-size:16px;}
+a{color:var(--accent);text-decoration:none;}
+a:hover{color:var(--blue2);}
+img{max-width:100%;display:block;}
+.container{max-width:1100px;margin:0 auto;padding:0 24px;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,15,30,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:16px 0;}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:1100px;margin:0 auto;padding:0 24px;}
+.nav-logo{font-family:var(--fh);font-size:20px;font-weight:700;color:#fff;letter-spacing:.3px;}
+.nav-logo span{color:var(--accent);}
+.nav-links{display:flex;gap:32px;list-style:none;}
+.nav-links a{font-size:14px;font-weight:500;color:var(--text2);transition:color .2s;}
+.nav-links a:hover{color:var(--accent);}
+.nav-cta{background:var(--blue);color:#fff;padding:9px 22px;border-radius:8px;font-size:14px;font-weight:600;transition:background .2s;}
+.nav-cta:hover{background:var(--blue2);color:#fff;}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;padding:100px 0 60px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:-200px;right:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(37,99,235,0.12) 0%,transparent 70%);pointer-events:none;}
+.hero::after{content:'';position:absolute;bottom:-100px;left:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(96,165,250,0.07) 0%,transparent 70%);pointer-events:none;}
+.hero-inner{display:grid;grid-template-columns:1fr 420px;gap:64px;align-items:center;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(37,99,235,0.15);border:1px solid rgba(37,99,235,0.3);border-radius:20px;padding:6px 16px;font-size:13px;font-weight:500;color:var(--accent);margin-bottom:20px;}
+.hero-badge span{width:7px;height:7px;border-radius:50%;background:#22c55e;animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.4;}}
+.hero h1{font-family:var(--fh);font-size:clamp(36px,5vw,58px);font-weight:700;line-height:1.1;color:#fff;margin-bottom:12px;letter-spacing:-.5px;}
+.hero h1 em{color:var(--accent);font-style:normal;}
+.hero-subtitle{font-size:18px;color:var(--text2);margin-bottom:28px;line-height:1.6;}
+.hero-stats{display:flex;gap:32px;margin-bottom:36px;}
+.stat-item{text-align:center;}
+.stat-num{font-size:28px;font-weight:800;color:#fff;line-height:1;}
+.stat-label{font-size:12px;color:var(--text3);margin-top:4px;text-transform:uppercase;letter-spacing:.5px;}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;}
+.btn-primary{background:var(--blue);color:#fff;padding:13px 28px;border-radius:9px;font-weight:600;font-size:15px;transition:all .2s;border:none;cursor:pointer;}
+.btn-primary:hover{background:var(--blue2);color:#fff;transform:translateY(-1px);}
+.btn-outline{border:1px solid var(--border);color:var(--text);padding:13px 28px;border-radius:9px;font-weight:500;font-size:15px;transition:all .2s;}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent);}
+
+/* HERO CARD */
+.hero-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px;position:relative;}
+.hero-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--blue),var(--accent));border-radius:16px 16px 0 0;}
+.avatar-ring{width:90px;height:90px;border-radius:50%;border:2px solid var(--blue);display:flex;align-items:center;justify-content:center;margin-bottom:16px;background:rgba(37,99,235,0.1);}
+.avatar-initials{font-size:28px;font-weight:800;color:var(--accent);}
+.hc-name{font-size:20px;font-weight:700;color:#fff;margin-bottom:4px;}
+.hc-role{font-size:13px;color:var(--text2);margin-bottom:20px;}
+.hc-info{display:flex;flex-direction:column;gap:10px;margin-bottom:20px;}
+.hc-row{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--text2);}
+.hc-icon{width:28px;height:28px;border-radius:6px;background:rgba(37,99,235,0.15);display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;}
+.hc-divider{border:none;border-top:1px solid var(--border);margin:16px 0;}
+.hc-skills{display:flex;flex-wrap:wrap;gap:6px;}
+.skill-tag{background:rgba(37,99,235,0.1);border:1px solid rgba(37,99,235,0.2);border-radius:6px;padding:4px 10px;font-size:11px;color:var(--accent);font-weight:500;}
+
+/* SECTIONS */
+section{padding:96px 0;}
+.section-label{font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:10px;}
+.section-title{font-family:var(--fh);font-size:clamp(28px,4vw,40px);font-weight:700;color:#fff;margin-bottom:16px;line-height:1.15;}
+.section-sub{font-size:17px;color:var(--text2);max-width:600px;line-height:1.7;}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-top:56px;}
+.about-text p{color:var(--text2);line-height:1.8;margin-bottom:16px;}
+.about-highlights{display:flex;flex-direction:column;gap:14px;margin-top:28px;}
+.highlight-item{display:flex;align-items:flex-start;gap:14px;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;}
+.hi-icon{width:36px;height:36px;border-radius:8px;background:rgba(37,99,235,0.15);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;}
+.hi-title{font-size:14px;font-weight:600;color:#fff;margin-bottom:2px;}
+.hi-val{font-size:13px;color:var(--text2);}
+
+/* SKILLS */
+.skills-section{background:var(--navy2);}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-top:56px;}
+.skill-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;transition:border-color .2s,transform .2s;}
+.skill-card:hover{border-color:var(--blue);transform:translateY(-2px);}
+.sk-icon{width:44px;height:44px;border-radius:10px;background:rgba(37,99,235,0.15);display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:14px;}
+.sk-title{font-size:15px;font-weight:600;color:#fff;margin-bottom:8px;}
+.sk-tags{display:flex;flex-wrap:wrap;gap:5px;}
+.sk-tag{background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:4px;padding:3px 8px;font-size:11px;color:var(--text2);}
+
+/* EXPERIENCE */
+.exp-timeline{margin-top:56px;position:relative;}
+.exp-timeline::before{content:'';position:absolute;left:20px;top:0;bottom:0;width:1px;background:var(--border);}
+.exp-item{padding-left:56px;position:relative;margin-bottom:40px;}
+.exp-dot{position:absolute;left:12px;top:6px;width:16px;height:16px;border-radius:50%;background:var(--blue);border:2px solid var(--navy);z-index:1;}
+.exp-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;}
+.exp-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:8px;gap:12px;flex-wrap:wrap;}
+.exp-title{font-size:16px;font-weight:600;color:#fff;}
+.exp-period{font-size:12px;color:var(--accent);background:rgba(37,99,235,0.1);border:1px solid rgba(37,99,235,0.2);border-radius:6px;padding:3px 10px;white-space:nowrap;}
+.exp-company{font-size:14px;color:var(--text2);margin-bottom:12px;}
+.exp-achievements{list-style:none;display:flex;flex-direction:column;gap:6px;}
+.exp-achievements li{font-size:14px;color:var(--text2);padding-left:16px;position:relative;}
+.exp-achievements li::before{content:'→';position:absolute;left:0;color:var(--accent);}
+
+/* ACHIEVEMENTS */
+.ach-section{background:var(--navy2);}
+.ach-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:56px;}
+.ach-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;text-align:center;transition:border-color .2s;}
+.ach-card:hover{border-color:var(--gold);}
+.ach-num{font-size:36px;font-weight:800;color:var(--gold);line-height:1;margin-bottom:6px;}
+.ach-label{font-size:14px;color:var(--text2);line-height:1.5;}
+
+/* SERVICES */
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:56px;}
+.svc-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:28px;transition:all .2s;}
+.svc-card:hover{border-color:var(--blue);transform:translateY(-2px);}
+.svc-icon{font-size:28px;margin-bottom:16px;}
+.svc-title{font-size:17px;font-weight:600;color:#fff;margin-bottom:10px;}
+.svc-desc{font-size:14px;color:var(--text2);line-height:1.7;}
+.svc-list{list-style:none;margin-top:14px;display:flex;flex-direction:column;gap:5px;}
+.svc-list li{font-size:13px;color:var(--text3);padding-left:14px;position:relative;}
+.svc-list li::before{content:'·';position:absolute;left:0;color:var(--accent);font-weight:700;}
+
+/* CONTACT */
+.contact-section{background:var(--navy2);}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:56px;align-items:start;}
+.contact-info{display:flex;flex-direction:column;gap:16px;}
+.ci-card{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px 20px;transition:border-color .2s;}
+.ci-card:hover{border-color:var(--blue);}
+.ci-icon{width:40px;height:40px;border-radius:8px;background:rgba(37,99,235,0.15);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
+.ci-label{font-size:12px;color:var(--text3);margin-bottom:2px;}
+.ci-val{font-size:14px;font-weight:500;color:var(--text);}
+
+/* FORM */
+.contact-form{display:flex;flex-direction:column;gap:14px;}
+.form-group{display:flex;flex-direction:column;gap:6px;}
+.form-label{font-size:13px;font-weight:500;color:var(--text2);}
+.form-input,.form-textarea{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:12px 16px;font-size:14px;color:var(--text);font-family:var(--fb);transition:border-color .2s;width:100%;}
+.form-input:focus,.form-textarea:focus{outline:none;border-color:var(--blue);}
+.form-textarea{resize:vertical;min-height:120px;}
+.form-btn{background:var(--blue);color:#fff;border:none;border-radius:9px;padding:13px 28px;font-size:15px;font-weight:600;cursor:pointer;transition:background .2s;font-family:var(--fb);}
+.form-btn:hover{background:var(--blue2);}
+
+/* FOOTER */
+footer{border-top:1px solid var(--border);padding:32px 0;}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
+.footer-logo{font-family:var(--fh);font-size:18px;font-weight:700;color:#fff;}
+.footer-logo span{color:var(--accent);}
+.footer-links{display:flex;gap:24px;}
+.footer-links a{font-size:13px;color:var(--text3);transition:color .2s;}
+.footer-links a:hover{color:var(--accent);}
+.footer-copy{font-size:13px;color:var(--text3);}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr;}
+  .hero-card{max-width:420px;}
+  .about-grid,.contact-grid{grid-template-columns:1fr;}
+  .nav-links{display:none;}
+}
+@media(max-width:600px){
+  .hero-stats{gap:20px;}
+  .stat-num{font-size:22px;}
+  .hero-btns{flex-direction:column;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo">Razu<span>.</span></div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Hire Me</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-badge"><span></span> Open to Opportunities</div>
+        <h1>Full Stack<br><em>Digital Marketing</em><br>Specialist</h1>
+        <p class="hero-subtitle">9+ years driving organic growth through SEO, data analytics, and performance marketing for B2B, e-commerce, and global brands.</p>
+        <div class="hero-stats">
+          <div class="stat-item"><div class="stat-num">9+</div><div class="stat-label">Years Exp.</div></div>
+          <div class="stat-item"><div class="stat-num">21+</div><div class="stat-label">Amazon Sites</div></div>
+          <div class="stat-item"><div class="stat-num">60%</div><div class="stat-label">Task Automation</div></div>
+          <div class="stat-item"><div class="stat-num">4</div><div class="stat-label">EU Markets</div></div>
+        </div>
+        <div class="hero-btns">
+          <a href="#contact" class="btn-primary">Get In Touch</a>
+          <a href="#experience" class="btn-outline">View Experience</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="avatar-ring"><div class="avatar-initials">RA</div></div>
+        <div class="hc-name">Razu Ahammed</div>
+        <div class="hc-role">Assistant Manager — SEO & Digital Marketing</div>
+        <div class="hc-info">
+          <div class="hc-row"><div class="hc-icon">🏢</div>PRAN-RFL Group, Bangladesh</div>
+          <div class="hc-row"><div class="hc-icon">📍</div>Dhaka, Bangladesh</div>
+          <div class="hc-row"><div class="hc-icon">🎓</div>9+ Years Experience</div>
+          <div class="hc-row"><div class="hc-icon">✅</div>Available for Freelance Projects</div>
+        </div>
+        <hr class="hc-divider">
+        <div class="hc-skills">
+          <span class="skill-tag">SEO</span>
+          <span class="skill-tag">GA4</span>
+          <span class="skill-tag">GTM</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Looker Studio</span>
+          <span class="skill-tag">Facebook Ads</span>
+          <span class="skill-tag">AI SEO</span>
+          <span class="skill-tag">E-commerce</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="section-label">About Me</div>
+    <h2 class="section-title">Data-Driven Marketer.<br>Results-Focused Strategist.</h2>
+    <p class="section-sub">I don't guess — I measure, analyse, and prove every decision with data.</p>
+    <div class="about-grid">
+      <div>
+        <div class="about-text">
+          <p>With over 9 years of hands-on experience in SEO and digital marketing, I specialise in turning complex data into clear, actionable strategies that drive measurable business growth.</p>
+          <p>At PRAN-RFL Group — Bangladesh's largest conglomerate — I lead SEO and digital marketing initiatives across e-commerce platforms, including Othoba.com. I have also worked extensively with European B2B clients across 4 countries, building and scaling organic traffic through technical SEO, content strategy, and data automation.</p>
+          <p>My edge is the combination of deep SEO expertise with Python automation skills — I have reduced manual reporting time by 60% and built custom analytics pipelines that help teams make faster, smarter decisions.</p>
+        </div>
+        <div class="about-highlights">
+          <div class="highlight-item">
+            <div class="hi-icon">📊</div>
+            <div><div class="hi-title">PRAN-RFL Group</div><div class="hi-val">Leading SEO for Bangladesh's largest conglomerate including Othoba.com e-commerce platform</div></div>
+          </div>
+          <div class="highlight-item">
+            <div class="hi-icon">🌍</div>
+            <div><div class="hi-title">European B2B Experience</div><div class="hi-val">Delivered SEO growth across 4 European countries for B2B e-commerce clients</div></div>
+          </div>
+          <div class="highlight-item">
+            <div class="hi-icon">🤖</div>
+            <div><div class="hi-title">Automation Specialist</div><div class="hi-val">Built Python scripts reducing manual reporting tasks by 60%, saving hundreds of hours annually</div></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:28px;">
+          <div style="font-size:14px;font-weight:600;color:#fff;margin-bottom:20px;">Core Competencies</div>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <!-- BARS -->
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:13px;color:var(--text2);margin-bottom:6px;"><span>Technical SEO</span><span>95%</span></div>
+              <div style="background:var(--border);border-radius:4px;height:5px;"><div style="width:95%;background:var(--blue);height:5px;border-radius:4px;"></div></div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:13px;color:var(--text2);margin-bottom:6px;"><span>GA4 & Analytics</span><span>92%</span></div>
+              <div style="background:var(--border);border-radius:4px;height:5px;"><div style="width:92%;background:var(--blue);height:5px;border-radius:4px;"></div></div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:13px;color:var(--text2);margin-bottom:6px;"><span>Python Automation</span><span>80%</span></div>
+              <div style="background:var(--border);border-radius:4px;height:5px;"><div style="width:80%;background:var(--accent);height:5px;border-radius:4px;"></div></div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:13px;color:var(--text2);margin-bottom:6px;"><span>E-commerce SEO</span><span>93%</span></div>
+              <div style="background:var(--border);border-radius:4px;height:5px;"><div style="width:93%;background:var(--blue);height:5px;border-radius:4px;"></div></div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:13px;color:var(--text2);margin-bottom:6px;"><span>Facebook Ads & CAPI</span><span>85%</span></div>
+              <div style="background:var(--border);border-radius:4px;height:5px;"><div style="width:85%;background:var(--accent);height:5px;border-radius:4px;"></div></div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:13px;color:var(--text2);margin-bottom:6px;"><span>Content Strategy</span><span>88%</span></div>
+              <div style="background:var(--border);border-radius:4px;height:5px;"><div style="width:88%;background:var(--blue);height:5px;border-radius:4px;"></div></div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:13px;color:var(--text2);margin-bottom:6px;"><span>Looker Studio</span><span>87%</span></div>
+              <div style="background:var(--border);border-radius:4px;height:5px;"><div style="width:87%;background:var(--accent);height:5px;border-radius:4px;"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="skills-section">
+  <div class="container">
+    <div class="section-label">Skills & Tools</div>
+    <h2 class="section-title">What I Work With</h2>
+    <p class="section-sub">A full stack of digital marketing tools — from technical auditing to data automation to paid media.</p>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="sk-icon">🔍</div>
+        <div class="sk-title">SEO & Technical Audit</div>
+        <div class="sk-tags">
+          <span class="sk-tag">Screaming Frog</span><span class="sk-tag">SEMrush</span><span class="sk-tag">Ahrefs</span><span class="sk-tag">Google Search Console</span><span class="sk-tag">Schema Markup</span><span class="sk-tag">Core Web Vitals</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="sk-icon">📊</div>
+        <div class="sk-title">Analytics & Reporting</div>
+        <div class="sk-tags">
+          <span class="sk-tag">GA4</span><span class="sk-tag">GTM</span><span class="sk-tag">Looker Studio</span><span class="sk-tag">BigQuery</span><span class="sk-tag">Data Studio</span><span class="sk-tag">Custom Dashboards</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="sk-icon">🤖</div>
+        <div class="sk-title">Automation & Dev</div>
+        <div class="sk-tags">
+          <span class="sk-tag">Python</span><span class="sk-tag">Pandas</span><span class="sk-tag">BeautifulSoup</span><span class="sk-tag">APIs</span><span class="sk-tag">Scripts</span><span class="sk-tag">Zapier</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="sk-icon">📱</div>
+        <div class="sk-title">Paid Media & Social</div>
+        <div class="sk-tags">
+          <span class="sk-tag">Facebook Ads</span><span class="sk-tag">Conversions API</span><span class="sk-tag">Facebook Pixel</span><span class="sk-tag">Retargeting</span><span class="sk-tag">Audience Strategy</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="sk-icon">🛒</div>
+        <div class="sk-title">E-commerce SEO</div>
+        <div class="sk-tags">
+          <span class="sk-tag">Amazon Affiliate</span><span class="sk-tag">Product Schema</span><span class="sk-tag">Category Optimisation</span><span class="sk-tag">Internal Linking</span><span class="sk-tag">European Markets</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="sk-icon">✍️</div>
+        <div class="sk-title">Content & AI SEO</div>
+        <div class="sk-tags">
+          <span class="sk-tag">GEO</span><span class="sk-tag">AEO</span><span class="sk-tag">llms.txt</span><span class="sk-tag">AI Overviews</span><span class="sk-tag">Content Strategy</span><span class="sk-tag">Keyword Research</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="container">
+    <div class="section-label">Experience</div>
+    <h2 class="section-title">Career Journey</h2>
+    <p class="section-sub">9+ years building organic growth across B2C, B2B, e-commerce, and enterprise marketing.</p>
+    <div class="exp-timeline">
+
+      <div class="exp-item">
+        <div class="exp-dot"></div>
+        <div class="exp-card">
+          <div class="exp-header">
+            <div class="exp-title">Assistant Manager — SEO & Digital Marketing</div>
+            <div class="exp-period">2022 — Present</div>
+          </div>
+          <div class="exp-company">PRAN-RFL Group · Dhaka, Bangladesh</div>
+          <ul class="exp-achievements">
+            <li>Leading SEO strategy for Othoba.com — Bangladesh's major B2C e-commerce platform</li>
+            <li>Built Python automation pipelines reducing manual reporting by 60%</li>
+            <li>Implemented GA4, GTM, and Looker Studio dashboards for cross-team data visibility</li>
+            <li>Managed technical SEO audits, schema markup, and Core Web Vitals optimisation</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-dot"></div>
+        <div class="exp-card">
+          <div class="exp-header">
+            <div class="exp-title">SEO Specialist — European B2B E-commerce</div>
+            <div class="exp-period">2020 — 2022</div>
+          </div>
+          <div class="exp-company">Alpha Consortium Europe · Remote (4 EU Countries)</div>
+          <ul class="exp-achievements">
+            <li>Delivered organic traffic growth for B2B e-commerce clients across UK, Germany, Netherlands, and France</li>
+            <li>Increased demo request conversion rate by 35% through landing page and content optimisation</li>
+            <li>Managed technical SEO, internal linking architecture, and category page strategies</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-dot"></div>
+        <div class="exp-card">
+          <div class="exp-header">
+            <div class="exp-title">Amazon Affiliate SEO Specialist</div>
+            <div class="exp-period">2016 — 2020</div>
+          </div>
+          <div class="exp-company">Independent / Freelance</div>
+          <ul class="exp-achievements">
+            <li>Built and ranked 21+ Amazon affiliate websites across multiple niches</li>
+            <li>Managed end-to-end SEO: keyword research, content strategy, on-page, link building</li>
+            <li>Developed proprietary content workflows to scale affiliate content production</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-dot"></div>
+        <div class="exp-card">
+          <div class="exp-header">
+            <div class="exp-title">Digital Marketing Executive</div>
+            <div class="exp-period">2015 — 2016</div>
+          </div>
+          <div class="exp-company">Early Career · Dhaka, Bangladesh</div>
+          <ul class="exp-achievements">
+            <li>Foundation in SEO, social media marketing, and digital campaign management</li>
+            <li>Developed skills in keyword research, on-page optimisation, and content writing</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section class="ach-section">
+  <div class="container">
+    <div class="section-label">Achievements</div>
+    <h2 class="section-title">Numbers That Matter</h2>
+    <div class="ach-grid">
+      <div class="ach-card">
+        <div class="ach-num">9+</div>
+        <div class="ach-label">Years in SEO & Digital Marketing</div>
+      </div>
+      <div class="ach-card">
+        <div class="ach-num">21+</div>
+        <div class="ach-label">Amazon Affiliate Sites Ranked</div>
+      </div>
+      <div class="ach-card">
+        <div class="ach-num">60%</div>
+        <div class="ach-label">Reduction in Manual Reporting via Python Automation</div>
+      </div>
+      <div class="ach-card">
+        <div class="ach-num">35%</div>
+        <div class="ach-label">Demo Request Rate Increase (EU B2B)</div>
+      </div>
+      <div class="ach-card">
+        <div class="ach-num">4</div>
+        <div class="ach-label">European Countries Served</div>
+      </div>
+      <div class="ach-card">
+        <div class="ach-num">50K+</div>
+        <div class="ach-label">Products Optimised on Othoba.com</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="section-label">Services</div>
+    <h2 class="section-title">What I Can Do For You</h2>
+    <p class="section-sub">From technical audits to full-funnel digital strategy — I work as a hands-on specialist, not a generalist agency.</p>
+    <div class="services-grid">
+      <div class="svc-card">
+        <div class="svc-icon">🔍</div>
+        <div class="svc-title">Technical SEO Audit</div>
+        <div class="svc-desc">In-depth technical analysis identifying issues holding your site back from ranking — with a clear, prioritised action plan.</div>
+        <ul class="svc-list">
+          <li>Crawl & indexation audit</li>
+          <li>Core Web Vitals analysis</li>
+          <li>Schema markup review</li>
+          <li>Internal linking structure</li>
+        </ul>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">🛒</div>
+        <div class="svc-title">E-commerce SEO</div>
+        <div class="svc-desc">Specialised SEO for e-commerce platforms — category pages, product pages, internal linking, and conversion optimisation.</div>
+        <ul class="svc-list">
+          <li>Category & product page optimisation</li>
+          <li>Faceted navigation fixes</li>
+          <li>Product schema & rich results</li>
+          <li>Content gap analysis</li>
+        </ul>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">📊</div>
+        <div class="svc-title">Analytics & Reporting</div>
+        <div class="svc-desc">GA4 setup, GTM implementation, and custom Looker Studio dashboards that make your data actually useful for decisions.</div>
+        <ul class="svc-list">
+          <li>GA4 setup & migration</li>
+          <li>GTM custom tracking</li>
+          <li>Looker Studio dashboards</li>
+          <li>Automated reporting</li>
+        </ul>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">🤖</div>
+        <div class="svc-title">SEO Automation</div>
+        <div class="svc-desc">Python-powered automation for repetitive SEO tasks — bulk audits, rank tracking, report generation, and data pipelines.</div>
+        <ul class="svc-list">
+          <li>Bulk audit automation</li>
+          <li>Custom rank tracking scripts</li>
+          <li>Data pipeline building</li>
+          <li>API integrations</li>
+        </ul>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">✍️</div>
+        <div class="svc-title">Content & AI SEO</div>
+        <div class="svc-desc">SEO content strategy built for both Google and AI search engines — including GEO, AEO, and llms.txt implementation.</div>
+        <ul class="svc-list">
+          <li>Content strategy & calendar</li>
+          <li>GEO & AEO optimisation</li>
+          <li>llms.txt implementation</li>
+          <li>AI search visibility</li>
+        </ul>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">📱</div>
+        <div class="svc-title">Facebook Ads & CAPI</div>
+        <div class="svc-desc">Facebook advertising with Conversions API setup — accurate tracking, retargeting audiences, and performance optimisation.</div>
+        <ul class="svc-list">
+          <li>Conversions API setup</li>
+          <li>Pixel implementation</li>
+          <li>Audience strategy</li>
+          <li>Campaign optimisation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+  <div class="container">
+    <div class="section-label">Contact</div>
+    <h2 class="section-title">Let's Work Together</h2>
+    <p class="section-sub">Have a project in mind? I'm available for freelance projects and consulting work. Let's talk.</p>
+    <div class="contact-grid">
+      <div>
+        <div class="contact-info">
+          <a href="mailto:razu.ahammed@email.com" class="ci-card" style="text-decoration:none;">
+            <div class="ci-icon">✉️</div>
+            <div><div class="ci-label">Email</div><div class="ci-val">[your email here]</div></div>
+          </a>
+          <a href="https://linkedin.com/in/razu-ahammed" target="_blank" class="ci-card" style="text-decoration:none;">
+            <div class="ci-icon">💼</div>
+            <div><div class="ci-label">LinkedIn</div><div class="ci-val">linkedin.com/in/razu-ahammed</div></div>
+          </a>
+          <div class="ci-card">
+            <div class="ci-icon">📍</div>
+            <div><div class="ci-label">Location</div><div class="ci-val">Dhaka, Bangladesh</div></div>
+          </div>
+          <div class="ci-card">
+            <div class="ci-icon">⏰</div>
+            <div><div class="ci-label">Availability</div><div class="ci-val">Open to freelance & consulting projects</div></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <form class="contact-form" onsubmit="return false;">
+          <div class="form-group">
+            <label class="form-label">Your Name</label>
+            <input type="text" class="form-input" placeholder="John Smith">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email Address</label>
+            <input type="email" class="form-input" placeholder="john@company.com">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Project Type</label>
+            <input type="text" class="form-input" placeholder="e.g. Technical SEO Audit, GA4 Setup...">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Message</label>
+            <textarea class="form-textarea" placeholder="Tell me about your project..."></textarea>
+          </div>
+          <button type="submit" class="form-btn">Send Message →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-logo">Razu<span>.</span></div>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-copy">© 2026 Razu Ahammed. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
